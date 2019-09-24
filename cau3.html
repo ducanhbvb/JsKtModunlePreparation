@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function printFibonacci(numBer) {
+        let fibonacci1 = 1;
+        let fibonacci2 = 1;
+        let trungGian;
+        while (fibonacci2 < numBer) {
+            trungGian = fibonacci2;
+            fibonacci2 = fibonacci1 + fibonacci2;
+            fibonacci1 = trungGian;
+            document.write(fibonacci1 + ' ');
+        }
+    }
+    let numBer=parseInt(prompt('input number='));
+    printFibonacci(numBer);
+</script>
+</body>
+</html>

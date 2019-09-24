@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="500px" style="border:1px solid #d3d3d3;"></canvas>
+<br>
+<p id="result"></p>
+<script>
+    let Rectangle = function (x, y, width, height, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.getX = function () {
+            return this.x;
+        };
+        this.getY = function () {
+            return this.y;
+        };
+        this.getHeight = function () {
+            return this.height;
+        };
+        this.getWidth = function () {
+            return this.width;
+        };
+        this.setHeight = function (height) {
+            this.height = height;
+        };
+        this.setWidth = function (width) {
+            this.width = width;
+        };
+        this.setRectangle = function (x,y,width, height,color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        };
+        this.printRectangle=function (myCanvas) {
+            var c = document.getElementById(myCanvas);
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x,this.y,this.width,this.height);
+            ctx.stroke();
+        }
+    };
+
+    let x = 10;
+    let y = 10;
+    let width = 200;
+    let height = 100;
+    let color = '#000000';
+    let ABCD = new Rectangle(x, y, width, height, color);
+    ABCD.printRectangle('myCanvas');
+</script>
+</body>
+</html>

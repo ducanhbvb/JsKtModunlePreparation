@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="main()">check</button>
+<p id="result"></p>
+<script>
+
+    function searchMax(arr) {
+        let max=arr[0];
+        for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max=arr[i];
+                }
+            }
+        return max;
+    }
+    function displayResult(max,arr) {
+        document.getElementById('result').innerHTML='';
+        document.getElementById('result').innerHTML+=arr+'<br>';
+        document.getElementById('result').innerHTML+='Number Max In arr = '+max;
+    }
+    function main() {
+        let array = [1,2,5,5,4,8,-4,9,5,4,8,5,4];
+        let max = searchMax(array);
+        displayResult(max, array);
+    }
+</script>
+</body>
+</html>

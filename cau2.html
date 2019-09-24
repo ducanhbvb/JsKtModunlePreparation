@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr,n) {
+        let arrayDemo=arr;
+        let check=arrayDemo.indexOf(n);
+        while(check!==-1){
+            arrayDemo.splice(check,1);
+            check=arrayDemo.indexOf(n);
+        }
+        return arrayDemo;
+    }
+    let arr=[1,2,3,5,4,4,5,4,5,7,8,9,4,4];
+    let n=0
+    document.write(arr+'<br>');
+    document.write(tryRemoveFromArray(arr,n)+' the number has been removed ='+n);
+</script>
+</body>
+</html>
